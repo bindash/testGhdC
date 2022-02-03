@@ -1,0 +1,11 @@
+<mat-toolbar class="navbar" color="primary">
+    <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-drawer-container class="drawer-container" hasBackdrop="true" autosize>
+    <mat-drawer class="sidenav" #drawer mode="side">
+        <p>Voici ma sidenav</p>
+    </mat-drawer>
+    <router-outlet></router-outlet>
+</mat-drawer-container>
