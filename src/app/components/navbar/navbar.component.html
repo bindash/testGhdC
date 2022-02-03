@@ -1,11 +1,23 @@
+<!-- Navbar -->
 <mat-toolbar class="navbar" color="primary">
     <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
     </button>
 </mat-toolbar>
+<!-- Sidebar -->
 <mat-drawer-container class="drawer-container" hasBackdrop="true" autosize>
-    <mat-drawer class="sidenav" #drawer mode="side">
+    <mat-drawer class="sidenav" #drawer mode="over">
+        <!-- Contenu de la sidebar -->
         <p>Voici ma sidenav</p>
+        <a class="link" routerLink="test">
+            <mat-icon>home</mat-icon>
+            Accueil
+        </a><br>
+        <a class="link" routerLink="test">
+            <mat-icon>calculate</mat-icon>
+            Calcul 
+        </a>
     </mat-drawer>
+    <!-- Pour obtenir la page actuelle sans que la sidebar se superpose par dessus -->
     <router-outlet></router-outlet>
 </mat-drawer-container>

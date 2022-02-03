@@ -8,7 +8,7 @@
 }
 .sidenav {
     display: flex;
-    width: 250px;
+    width: 200px;
     align-items: center;
     justify-content: center;
     // border: 1px solid rgba(0, 0, 0, 0.5);
@@ -16,4 +16,10 @@
 }
 p {
     color: white;
+}
+a.link {
+    font-size: 16px;
+    text-align: right;
+    color: white;
+    text-decoration: none;
 }
