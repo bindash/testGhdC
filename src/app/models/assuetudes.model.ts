@@ -1,3 +1,3 @@
 export interface Assuetudes {
-    consommationTabagique: number
+    Consommation_tabagique: number
 }

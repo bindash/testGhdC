@@ -1,6 +1,7 @@
 export interface Admin {
     prenom: string
     nom: string
-    dateNaissance: Date
-    genre: boolean
+    "date_de _naissance": string
+    age: number
+    Genre: string
 }

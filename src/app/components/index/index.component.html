@@ -1,3 +1,13 @@
+<div class="typeDonnees">
+    <h3>Type de données : </h3>
+    <ng-select class="customSelect"
+            [items]="typeDonnees"
+            autofocus
+            [clearable]="false"
+            [searchable]="false"
+            (change)="enablePatients($event)"
+            #typeDonneesSelect></ng-select>
+</div>
 <table>
     <tr>
         <th>
@@ -16,9 +26,11 @@
     <td>
         <ng-select class="custom"
         [items]="peoples"
-        autofocus
         bindLabel="nomPrenom"
-        bindValue="id">
+        bindValue="id"
+        (change)="getPatientById($event)"
+        [readonly]="disablePatients"
+        #selectUn>
             <ng-template ng-label-tmp let-item="item">
                 <span>{{ item.admin.prenom + ' ' + item.admin.nom }}</span>
             </ng-template>
@@ -31,7 +43,10 @@
         <ng-select class="custom"
         [items]="peoples"
         bindLabel="nomPrenom"
-        bindValue="id">
+        bindValue="id"
+        (change)="getPatientByIdDeux($event)"
+        [readonly]="disablePatients"
+        #selectDeux>
             <ng-template ng-label-tmp let-item="item">
                 <span>{{ item.admin.prenom + ' ' + item.admin.nom }}</span>
             </ng-template>
@@ -44,7 +59,10 @@
         <ng-select class="custom"
         [items]="peoples"
         bindLabel="nomPrenom"
-        bindValue="id">
+        bindValue="id"
+        (change)="getPatientByIdTrois($event)"
+        [readonly]="disablePatients"
+        #selectTrois>
             <ng-template ng-label-tmp let-item="item">
                 <span>{{ item.admin.prenom + ' ' + item.admin.nom }}</span>
             </ng-template>
@@ -57,7 +75,10 @@
         <ng-select class="custom"
         [items]="peoples"
         bindLabel="nomPrenom"
-        bindValue="id">
+        bindValue="id"
+        (change)="getPatientByIdQuatre($event)"
+        [readonly]="disablePatients"
+        #selectQuatre>
             <ng-template ng-label-tmp let-item="item">
                 <span>{{ item.admin.prenom + ' ' + item.admin.nom }}</span>
             </ng-template>
@@ -68,4 +89,4 @@
     </td>
 </table>
 
-<app-column-graph></app-column-graph>
+<app-column-graph [patientUn]="donnees" [patientDeux]="donneesDeux" [patientTrois]="donneesTrois" [patientQuatre]="donneesQuatre"></app-column-graph>

@@ -1,7 +1,7 @@
 import { Admin } from "./admin.model";
 import { Assuetudes } from "./assuetudes.model";
 import { Biometrie } from "./biometrie.model";
-import { ConstBiologique } from "./constBiologique.model";
+import { Const_biologique } from "./const_biologique.model";
 import { Parametres } from "./parametres.model";
 
 export interface Patient {
@@ -9,7 +9,8 @@ export interface Patient {
     admin: Admin
     nomPrenom: string
     biometrie: Biometrie
-    constBiologique: ConstBiologique
+    const_biologique: Const_biologique
     parametres: Parametres
     assuetudes: Assuetudes
+    disabled: boolean
 }
